@@ -1,0 +1,47 @@
+{% extends './home.html' %}
+{% block content %}
+
+<style>
+table{
+border-collapse:collapse;
+width : 75%;
+}
+th{
+text-align:center;
+}
+th,td {
+padding: 10px;
+text-align:center;
+}
+tr:nth-child(even) { background-color: #f2f2f2;}
+th {
+background-color: yellowgreen;
+color : white;
+}
+</style>
+
+<div class="content-inner">
+          <!-- Page Header-->
+    <header class="page-header">
+     <div class="container-fluid">
+    <h2 class="no-margin-bottom">Ordered Details</h2>
+</div> </header><br/>
+
+<center>
+ <div class="cardstyle">
+  <div class="card w-75">
+  <div class="card-body">
+  
+<table> <tr>
+<th> Employee Name </th>
+<th> Food Name </th>
+<th> Quantity </th>
+
+{% for row in view %}
+<tr>
+<td> {{ row.emp_name }} </td>
+<td> {{ row.food_name }} </td>
+<td> {{ row.quantity }} </td> 
+{% endfor %}
+</tr> </table> </div></div></div></center>
+{% endblock %}

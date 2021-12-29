@@ -1,0 +1,47 @@
+{% extends './home.html' %}
+{% block content %}
+
+<div class="content-inner">
+          <!-- Page Header-->
+    <header class="page-header">
+     <div class="container-fluid">
+       <h2 class="no-margin-bottom" align="center">Select your food</h2>
+</div> </header><br/>
+
+<form method="POST" action =""  novalidate>
+           {{ form.hidden_tag() }}
+<center>
+ <div class="cardstyle">
+  <div class="card w-75">
+  <div class="card-body">
+    <h4><svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-person-check-fill" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9.854-2.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+</svg>  Your name </h4>
+    <h6 style="color: red;">{{ name.title() }}</h6>
+
+    <h4> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-journal-text" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1H2a2 2 0 0 1 2-2z"/>
+  <path d="M2 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2z"/><path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+</svg>    Choose the food items from the available menu </h4>
+    <table><tr>
+     <th> ID </th>
+     <th> Menu Item </th></tr>
+    {% for row in detail %}
+        <tr>
+            <td>{{ row.f_id }}</td>
+            <td> {{ row.f_name }} </td>
+    {% endfor %}
+ </tr></table>
+    <h6 style="color: green;"> Note: Please select food id alone</h6>
+
+    <h4> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg>  &ensp; Please select the item you need to order</h4>
+    {{ form.item(class="form-control mr-sm-2" ,style="width:30%") }} <br/>
+
+    <h4> Quantity of an item </h4>
+    {{ form.quantity(class="form-control mr-sm-2" ,style="width:30%") }} <br/>
+    <div class="container-login100-form-btn">
+            {{ form.submit(class="btn btn-primary",style="bg-color:indigo") }} <br/></div>
+</div></div></div></center></form>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends './home.html' %}
+{% block content %}
+
+<div class="content-inner">
+          <!-- Page Header-->
+   <header class="page-header">
+    <div class="container-fluid">
+    <h2 class="no-margin-bottom">Adding Employee &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Removing Employee </h2>
+	</div></header><br/>
+	
+ <form method="POST" action =""  novalidate>
+      {{ form.hidden_tag() }}  
+	<div class="col-md-8" style="float:left">
+    <div class="card w-75">
+       <div class="card-body">
+	   <center>
+<h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-square" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/> <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg> &ensp; ID </h3>
+      {{ form.id(class="form-control mr-sm-2" ,style="width:50%") }} <br/>
+
+	  <h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+</svg> &ensp; Name </h3>
+    {{ form.name(class="form-control mr-sm-2" ,style="width:50%") }} <br/>
+
+<h3><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+</svg> &ensp; Email Id </h3>
+	{{ form.email(class="form-control mr-sm-2" ,style="width:50%") }} <br/>
+
+	<h3><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-text" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+  <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+</svg> &ensp; Address </h4>
+	{{ form.address(class="form-control mr-sm-2" ,style="width:50%") }} <br/>
+	
+	<h3><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+  <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+</svg> &ensp; Date of joining </h3>
+	{{ form.date_of_joining(class="form-control mr-sm-2" ,style="width:50%", type="date") }} <br/>
+	
+<h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-briefcase" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6h-1v6a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-6H0v6z"/>
+  <path fill-rule="evenodd" d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v2.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 6.884V4.5zM1.5 4a.5.5 0 0 0-.5.5v1.616l6.871 1.832a.5.5 0 0 0 .258 0L15 6.116V4.5a.5.5 0 0 0-.5-.5h-13zM5 2.5A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z"/>
+</svg> &ensp; Experience </h3>
+	{{ form.experience(class="form-control mr-sm-2" ,style="width:50%") }} <br/>
+
+	<div class="container-login100-form-btn">
+		{{ form.submit(class="btn btn-primary",style="bg-color:indigo") }} <br/></div>
+</center></div></div></div></form>
+
+
+<form method="POST" action =""  novalidate>
+      {{ form1.hidden_tag() }}
+<div class="col-md-4" style="float:right">
+    <div class="card w-75">
+       <div class="card-body">
+	   <center>
+
+<h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+  <path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/><circle cx="3.5" cy="5.5" r=".5"/><circle cx="3.5" cy="8" r=".5"/><circle cx="3.5" cy="10.5" r=".5"/>
+</svg> &ensp; ID </h3>
+      {{ form1.id1(class="form-control mr-sm-2" ,style="width:60%") }} <br/>
+
+	<div class="container-login100-form-btn">
+		{{ form1.submit1(class="btn btn-primary",style="bg-color:indigo") }} <br/></div>
+</center></div></div></div>
+</form>
+
+{% endblock %}

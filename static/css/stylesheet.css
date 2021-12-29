@@ -1,0 +1,40 @@
+.navbar {
+    overflow: hidden;
+    background-color: rgb(47, 12, 204);
+    height: 4rem;
+    text-align: center;
+  }
+  body
+  {
+      text-align: center;
+      background-color: darkgrey;
+  }
+  .wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 30px;
+  data-placeholder="&#xf207";
+
+  .cardstyle {
+    margin-top: 3rem;
+}
+.cardstyle .w-75 .card-body .bdyflex .flxtwo .button{
+     border: none;
+            outline: none;
+            height: 40px;
+            background: brown;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+            margin-top: 3rem;
+}
+.cardstyle .bimg{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+.cardstyle .w-75 .card-body .imgbu{
+    float: left;
+}

@@ -1,0 +1,185 @@
+{% block content %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="static/css/fontastic.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Main Navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <!-- Search Box-->
+     <div class="search-box">
+        <button class="dismiss"><i class="icon-close"></i></button>
+         <form id="searchForm" action="#" role="search">
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+      </form>
+    </div>
+   <div class="container-fluid">
+    <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <!-- Navbar Header-->
+    <div class="navbar-header">
+                <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+     <div class="brand-text d-none d-lg-inline-block"><strong>Dashboard</strong></div>
+     <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+</div></div></div></nav></header>
+    <div class="page-content d-flex align-items-stretch"> 
+   <nav class="side-navbar">
+    <div class="sidebar-header d-flex align-items-center">
+	<div class="avatar"><img src="static/images/logo.jpg" alt="..." class="img-fluid rounded-circle"></div>
+    <div class="title">
+     <h1 class="h4">Company Name</h1>
+              <p>Purpose</p>
+   </div></div>
+          <!-- Sidebar Navidation Menus-->
+          <ul class="list-unstyled">
+
+     <li class="active"><a href="{{ url_for('index') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/> </svg>  &ensp; Home </a></li>
+
+     <li><a href="{{ url_for('loginpage') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-key" fill="red" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/><path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg> &ensp;   Login - Admin/Client </a></li>
+
+    <li><a href="{{ url_for('empreport') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-display" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M5.75 13.5c.167-.333.25-.833.25-1.5h4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75z"/><path fill-rule="evenodd" d="M13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/> </svg>   &ensp;   Employee Reports </a></li>
+
+
+    <li><a href="{{ url_for('employee') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-journals" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2z"/><path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2zM1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/> </svg> &ensp;  Employee Login </a></li>
+
+     <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-journal-check" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M4 1h5v1H4a1 1 0 0 0-1 1H2a2 2 0 0 1 2-2zm10 7v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8h1zM2 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2z"/><path fill-rule="evenodd" d="M15.854 2.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 4.793l2.646-2.647a.5.5 0 0 1 .708 0z"/> </svg>  &ensp;   Admin Login </a>
+
+        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+
+      <li><a href="{{ url_for('daily_report') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt" fill="red" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/><path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+</svg>  &ensp;  Daily Report </a></li>
+
+    <li><a href="{{ url_for('monthly_report') }}"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt" fill="red" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/><path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+</svg>  &ensp;  Monthly report </a></li> </ul></li></ul>
+</nav>
+
+        <div class="content-inner">
+          <!-- Page Header-->
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">About Us</h2>
+            </div>
+          </header>
+          <!-- Dashboard Counts Section-->
+          <section class="dashboard-counts no-padding-bottom">
+       <div class="container-fluid">
+       <div class="row bg-white has-shadow">
+<div class="col-xl-3 col-sm-6">
+    <div class="item d-flex align-items-center">
+    <div class="icon bg-violet"></div>
+     <div class="title"><span>Total<br>Employee</span>
+</div>
+     <div class="number">{{ emp }}</div></div></div>
+                <!-- Item -->
+    <div class="col-xl-3 col-sm-6">
+    <div class="item d-flex align-items-center">
+     <div class="icon bg-red"></div>
+<div class="title"><span>New<br>Joiners</span>
+ </div>
+                    <div class="number">{{ new }}</div>
+                  </div>
+                </div>
+                <!-- Item -->
+        <div class="col-xl-3 col-sm-6">
+         <div class="item d-flex align-items-center">
+         <div class="icon bg-green"></div>
+       <div class="title"><span>Today<br>Veg count</span>
+         </div>
+    <div class="number">{{ veg_count }}</div>
+                  </div></div>
+                <!-- Item -->
+      <div class="col-xl-3 col-sm-6">
+       <div class="item d-flex align-items-center">
+        <div class="icon bg-orange"></div>
+         <div class="title"><span>Today<br>Nonveg count</span>
+         </div>
+        <div class="number">{{ nonveg }}</div>
+        </div></div></div></div>
+          </section>
+          <!-- Dashboard Header Section    -->
+          <section class="dashboard-header">
+            <div class="container-fluid">
+             
+            </div>
+          </section>
+          <!-- Projects Section-->
+          <!-- Client Section-->
+          <section class="client no-padding-top">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Work Amount  -->
+                <div class="col-lg-4">
+                  <div class="work-amount card">
+                    <div class="card-close">
+                      <div class="dropdown">
+                        
+                      </div>
+                    </div>
+      <div class="card-body">
+         <h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+</svg>  &ensp;   Working Hours</h3><small>per week</small>
+ <div class="chart text-center">
+     <div class="text"><strong>40</strong><br><span>Hours</span></div>
+                        <canvas id="pieChart"></canvas></div></div></div></div>
+    <div class="col-lg-4">
+    <div class="overdue card">
+   <div class="card-close">
+      <div class="dropdown">
+    </div></div>
+        <div class="card-body">
+        <h3> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z"/>
+  <path d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+</svg>  &ensp;   Amount Spended</h3><small>by company for each employee for this month</small>
+    <div class="number text-center">Rs. {{ info }}</div>
+    </div></div></div></div></section>
+          <!-- Page Footer-->
+          <footer class="main-footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Your company &copy; 2017-2020</p>
+                </div>
+     <div class="col-sm-6 text-right">
+                  <p>Design by <a href="https://bootstrapious.com/p/admin-template" class="external">Bootstrapious</a></p>
+                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div></div></div></footer></div></div></div>
+    <!-- JavaScript files-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="static/vendor/chart.js/Chart.min.js"></script>
+    <script src="static/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="static/js/charts-home.js"></script>
+    <!-- Main File-->
+    <script src="static/js/front.js"></script>
+  </body>
+</html>
+{% endblock %}
